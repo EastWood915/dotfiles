@@ -5,7 +5,7 @@ ZSH_REQS_FILE="zshRequirements.txt"
 
 # Install required system packages
 echo "Installing required system packages..."
-sudo sh ./installPackages.sh "$ZSH_REQS_FILE"
+sudo bash ./installPackages.sh "$ZSH_REQS_FILE"
 echo
 
 # Install fonts
@@ -19,7 +19,7 @@ if [ -d "$FONTS_DIR" ]; then
                 echo "Font already installed: $font_name"
             else
                 # Copy the font to the user's fonts directory
-                cp "$font" /usr/share/fonts
+                sudo cp "$font" /usr/share/fonts
                 echo "Installed font: $font_name"
             fi
         fi
